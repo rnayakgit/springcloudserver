@@ -1,0 +1,17 @@
+server:
+  port: 8090
+spring:
+  cloud:
+    config:
+      server:
+        git:
+        ## use the git url link here to fetch the external config properties details
+          uri: https://github.com/rnayakgit/springcloudserverproperties
+        health:
+          enabled: true
+      name: config-server
+
+management:
+  endpoint:
+    health:
+      show-details: always
